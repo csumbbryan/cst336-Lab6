@@ -1,0 +1,50 @@
+<%- include("partials/header.ejs") %>
+
+  <div class="subheader">Updating Quote Data</div>
+  <div class="hr"><hr></div>
+    <div class="content">
+
+    <form method="POST" action="/quote/edit">
+
+      <input type="hidden" name="authorId" value="<%=quoteInfo[0].authorId%>">
+      <input type="hidden" name="quoteId" value="<%=quoteInfo[0].quoteId%>">
+
+      Author Name:
+      <select name="author">
+        <% for (i of author) {%>
+          <% if (i.authorId == quoteInfo[0].authorId) {%>
+            <option value="<%=i.authorId%>" selected="selected"><%=i.firstName%> <%=i.lastName%></option>
+          <% } else { %>
+            <option value="<%=i.authorId%>"><%=i.firstName%> <%=i.lastName%></option>
+          <% } %>
+        <% } %>
+      </select>
+      <br>
+      Category: 
+      <select name="category">
+        <% for (i of category) {%>
+          <% if (i.category == quoteInfo[0].category) {%>
+            <option value="<%=i.category%>" selected="selected"><%=i.category%></option>
+          <% } else { %>
+            <option value="<%=i.category%>"><%=i.category%></option>
+          <% } %>
+        <% } %>
+      </select>
+      <br>
+      Likes: 
+      <input type="text" name="likes" placeholder="<%=quoteInfo[0].likes%>" value="<%=quoteInfo[0].likes%>">
+      <br>
+      <textarea cols="40" rows="5" name="quote"><%=quoteInfo[0].quote%></textarea>
+      <br>
+
+      <button class="addUpdate">Update Quote</button>
+
+
+    </form>          
+    <br>
+
+    <% if (typeof message != "undefined") { %>
+      <h3><%=message%></h3>
+    <% } %>
+  </div>
+<%- include("partials/footer.ejs") %>

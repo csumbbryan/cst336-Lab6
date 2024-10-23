@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs") %>
+
+
+ <div class="subheader"> Update/Delete Authors </div>
+   <div class="hr"><hr></div>
+ <div class="content">
+
+ <% for (i=0; i < authors.length; i++) { %>
+
+
+   <a href="/author/edit?authorId=<%=authors[i].authorId%>"><img src="/img/edit-246.png" width="20"></a>
+
+
+   <a href="/author/delete?authorId=<%=authors[i].authorId%>"><img src="/img/6861362.png" width="20"></a>
+
+
+   <%=authors[i].firstName%>
+   <%=authors[i].lastName%> <br>
+
+
+ <% } %>
+ </div>
+
+<%- include("partials/footer.ejs") %>

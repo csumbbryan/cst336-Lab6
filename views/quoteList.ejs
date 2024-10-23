@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+<div class="subheader">Update/Delete Quotes </div>
+    <div class="hr"><hr></div>
+
+<div class="content">
+ <% for (i=0; i < quotes.length; i++) { %>
+
+
+   
+
+
+   <b>Author Name:</b> <%=quotes[i].firstName%>
+   <%=quotes[i].lastName%> <br>
+   <b>Category: </b><%=quotes[i].category%> <br>
+   <b>Quote:</b> <br> <%=quotes[i].quote%> <br>
+   <b>Likes: </b><%=quotes[i].likes%> <br>
+
+   <a href="/quote/edit?quoteId=<%=quotes[i].quoteId%>"><img src="/img/edit-246.png" width="20"></a>
+
+
+   <a href="/quote/delete?quoteId=<%=quotes[i].quoteId%>"><img src="/img/6861362.png" width="20"></a>
+
+   <hr>
+
+ <% } %>
+</div>
+<%- include("partials/footer.ejs") %>

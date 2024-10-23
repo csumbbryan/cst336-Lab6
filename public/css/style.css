@@ -1,0 +1,134 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+div.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 800px;
+}
+
+div.header {
+  text-align: center;
+  font-size: 1.7em;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+div.subheader {
+  font-size: 1.5em;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
+
+div.hr {
+  text-align: center;
+}
+
+div.hr hr {
+  width: 70%;
+  border-top: 3px solid #353535;
+}
+
+div.navigation {
+  text-align: left;
+  min-width: 120px;
+  background-color: #898989;
+  height: auto;
+  min-height: 200px;
+}
+
+div.frame {
+  min-width: 300px;
+  width: 100%;
+  line-height: 1.8em;
+  background-color: #f2f2f2;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+div.content {
+  overflow-y: auto;
+  max-height: 900px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+div.contentMain {
+  max-height: 900px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+div.frame input {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+div.frame select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+div.frame textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button.navigation {
+  border: none;
+  text-align: left;
+  font-family: inherit;
+  font-size: 1.2em;
+  width: 100%;
+  margin: 0px;
+  height: 40px;
+  background-color: #898989;
+}
+
+button.navigation:hover {
+  background-color: #567890;
+  color: white;
+  font-size: 1.1em;
+  transition: 0.4s;
+}
+
+button.navigation2 {
+  border: none;
+  font-family: inherit;
+  font-size: .9em;
+  background-color: #567890;
+  border-radius: 5px;
+  min-height: 40px;
+  color: white;
+  box-shadow: 2px 2px #353535;
+}
+
+button.navigation2:hover {
+  position: relative;
+  left: 2px;
+  box-shadow: 0px 0px;
+  transition: .4s;
+}
+
+button.addUpdate {
+  font-family: inherit;
+  font-size: 1.2em;
+  margin: 10px;
+}
+
+div.footer {
+  width: 80%;
+  max-width: 800px;
+}
+
+footer {
+  text-align: center;
+  max-width: 800px;
+}

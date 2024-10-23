@@ -1,0 +1,35 @@
+<%- include("partials/header.ejs") %>
+    <div class="subheader">Adding a new Author</div>
+  <div class="hr"><hr></div>
+
+    <div class="content">
+    <form method="POST" action="/author/new">
+      First Name:
+      <input type="text" name="fName"><br>
+      Last Name:
+      <input type="text" name="lName"><br>
+      Date of Birth:
+      <input type="date" name="birthDate"><br>
+      Date of Death: 
+      <input type="date" name="deathDate"><br>  
+      Sex: 
+      <select name="sex">
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+      </select><br>
+      Profession: 
+      <input type="text" name="profession"><br>
+      Country: 
+      <input type="text" name="country"><br>
+      Portrait (URL):
+      <input type="text" name="portrait"><br>
+      Biography: 
+      <textarea cols="40" rows="5" name="biography"></textarea><br>
+      <button class="addUpdate">Add Author</button>
+    </form>
+
+  <% if (typeof message != "undefined"){ %>
+           <h3><%=message%></h3>
+   <% } %>
+ </div>
+<%- include("partials/footer.ejs") %>
